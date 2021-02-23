@@ -5,7 +5,7 @@
     {{state.name}} 
     {{state.num}}
     <div class="login">
-        <van-button type="primay" @click="goLogin">跳转登录页</van-button>
+        <van-button type="primary" @click="goLogin">跳转登录页</van-button>
     </div>
 </template>
 
