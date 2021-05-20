@@ -16,7 +16,15 @@ export default defineConfig({
     open: true,
     proxy: {
       // 选项写法
-      '/api': 'http://123.56.85.24:5000'//代理网址
+      // '/api': 'http://123.56.85.24:5000'//代理网址
+      '/proxy-api': {
+        target: 'https://report.planplus.cn',
+        changeOrigin: true,
+      },
+      '/v1/': {
+        target: 'https://wxtest.planplus.cn/',
+        changeOrigin: true,
+      },
     },
     cors:true
   }

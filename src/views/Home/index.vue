@@ -10,31 +10,31 @@
 </template>
 
 <script lang="ts" setup="props">
-import { reactive } from 'vue'
-import {useRouter} from 'vue-router'
-import {useStore} from 'vuex';
-import { article } from '@/api/index';
- 
-const router = useRouter();
-const store = useStore();
-const goLogin = () => {
-    router.push("/login")
-};
-const add = () => {
-    store.commit("addNum");
-    state.num = store.state.num;
-    state.num > 20 ? (state.color = "pink") : (state.color = "#ccc");
-};
+    import { reactive } from 'vue'
+    import {useRouter} from 'vue-router'
+    import {useStore} from 'vuex';
+    import { article } from '@/api/index';
+    
+    const router = useRouter();
+    const store = useStore();
+    const goLogin = () => {
+        router.push("/login")
+    };
+    const add = () => {
+        store.commit("addNum");
+        state.num = store.state.num;
+        state.num > 20 ? (state.color = "pink") : (state.color = "#ccc");
+    };
 
-article().then((res: any) => {
-    console.log(res)
-})
+    article().then((res: any) => {
+        console.log(res)
+    })
 
-const state = reactive({
-    name: 'kido',
-    num: 10,
-    color: "#ccc"
-})
+    const state = reactive({
+        name: 'kido',
+        num: 10,
+        color: "#ccc"
+    })
 </script>
 <style>
     .text {

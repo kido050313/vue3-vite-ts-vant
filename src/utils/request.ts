@@ -1,5 +1,5 @@
 import axios from "axios";
-let baseURL = "/api";
+let baseURL = "/proxy-api";
 const service = axios.create({
   baseURL,
   timeout: 5000 // request timeout
