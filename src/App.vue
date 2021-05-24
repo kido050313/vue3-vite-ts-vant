@@ -1,17 +1,12 @@
-  
 <template>
-  <RouterView />
+<keep-alive>
+    <RouterView />
+  </keep-alive>
+  
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
-export default defineComponent({
-  name: "App",
-  components: {
-    HelloWorld,
-  },
-});
+<script lang="ts" setup="props">
+
 </script>
 
 <style>

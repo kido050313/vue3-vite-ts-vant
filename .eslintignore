@@ -1,0 +1,6 @@
+/lambda/
+/scripts
+/node_modules
+/dist
+.history
+/public
