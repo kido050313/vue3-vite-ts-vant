@@ -86,12 +86,15 @@ export default {
     ul {
         display: flex;
         width: 100vw;
-        height: 80px;
+        height: 60px;
+        border-top: 1px solid #dedede;
+        background-color: #fff;
         a {
             flex: 1;
             height: 100%;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             color: #333;
             &.active {
                 color: #1890FF;
