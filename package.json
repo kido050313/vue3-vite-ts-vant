@@ -6,7 +6,16 @@
     "build": "vuedx-typecheck . && vite build",
     "serve": "vite preview",
     "lint": "eslint --fix --ext .js, .vue src/",
-    "cz": "git cz"
+    "lint-staged": "lint-staged",
+    "commitlint": "commitlint --config commitlint.config.js -e -V",
+    "cz": "git cz",
+    "prepare": "husky install"
+  },
+  "lint-staged" : {
+    "src/**/*.{js,vue,md,json}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "axios": "^0.21.1",
