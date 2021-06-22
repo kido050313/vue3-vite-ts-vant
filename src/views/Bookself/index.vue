@@ -1,3 +1,5 @@
 <template>
-    <div>书架</div>
+    <div>
+        <h1>书架</h1>
+    </div>
 </template>
