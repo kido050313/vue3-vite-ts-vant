@@ -8,15 +8,10 @@
     "lint": "eslint --fix --ext .js, .vue src/",
     "lint-staged": "lint-staged",
     "commitlint": "commitlint --config commitlint.config.js -e -V",
-    "cz": "git cz",
+    "commit": "git cz",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged" : {
+  "lint-staged": {
     "src/**/*.{js,vue,md,json}": [
       "eslint --fix",
       "prettier --write"

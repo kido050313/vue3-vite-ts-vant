@@ -1,17 +1,15 @@
 <template>
-    <tab-bar></tab-bar>
+  <tab-bar></tab-bar>
 </template>
 <script lang="ts">
-import TabBar from '@/components/TabBar/index.vue';
-export default {
+  import TabBar from '@/components/TabBar/index.vue'
+  export default {
     components: {
-        TabBar,
+      TabBar
     },
     setup() {
-        console.log(22323)
+      console.log(22323)
     }
-}
+  }
 </script>
-<style lang="less" scoped>
-
-</style>
+<style lang="less" scoped></style>
