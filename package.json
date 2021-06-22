@@ -11,6 +11,11 @@
     "cz": "git cz",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged" : {
     "src/**/*.{js,vue,md,json}": [
       "eslint --fix",
