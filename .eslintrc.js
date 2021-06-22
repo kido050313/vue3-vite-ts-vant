@@ -7,6 +7,7 @@ module.exports = {
   },
   extends: ["plugin:vue/vue3-recommended", "plugin:prettier/recommended"],
   parserOptions: {
+    parser: "babel-parse",
     ecmaVersion: 12,
     sourceType: "module",
   },

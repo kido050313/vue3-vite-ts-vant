@@ -5,15 +5,17 @@
     "dev": "vite",
     "build": "vuedx-typecheck . && vite build",
     "serve": "vite preview",
-    "lint": "eslint --fix --ext .js, .vue src/",
+    "lint": "eslint --fix --ext .js, .ts, .jsx, .tsx, .vue src/",
     "lint-staged": "lint-staged",
     "commitlint": "commitlint --config commitlint.config.js -e -V",
     "commit": "git cz",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{js,vue,md,json}": [
-      "eslint --fix",
+    "src/**/*.less": "stylelint --syntax less",
+    "src/**/*.{js, ts, jsx, tsx, vue}": "npm run lint",
+    "src/**/*.{ts,tsx,js,jsx,less,md,json,vue}": [
+      "eslint",
       "prettier --write"
     ]
   },
@@ -26,6 +28,7 @@
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@babel/parser": "^7.14.7",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@types/node": "^14.14.31",
