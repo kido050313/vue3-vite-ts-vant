@@ -1,23 +1,17 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:vue/vue3-essential",
-        "plugin:@typescript-eslint/recommended"
-    ],
-    "parser": "vue-eslint-parser",
-    "parserOptions": {
-        "ecmaVersion": 12,
-        "parser": "@typescript-eslint/parser babel-eslint",
-        "sourceType": "module",
-    },
-    "plugins": [
-        "vue",
-        "@typescript-eslint"
-    ],
-    "rules": {
-    }
+  parser: "vue-eslint-parser",
+  env: {
+    browser: true,
+    node: true,
+    es2021: true,
+  },
+  extends: ["plugin:vue/vue3-recommended", "plugin:prettier/recommended"],
+  parserOptions: {
+    parser: "babel-parse",
+    ecmaVersion: 12,
+    sourceType: "module",
+  },
+  rules: {
+    "prettier/prettier": "error",
+  },
 };

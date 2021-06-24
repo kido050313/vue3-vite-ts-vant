@@ -24,7 +24,7 @@ export default {
         // const events = 
         
     }
-}
+  }
 </script>
 <style lang="less" scoped>
 .content {
