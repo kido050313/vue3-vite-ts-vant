@@ -21,6 +21,8 @@ export default {
     },
     setup() {
         console.log(22323)
+        // const events = 
+        
     }
 }
 </script>
